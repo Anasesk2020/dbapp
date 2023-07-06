@@ -10,6 +10,10 @@ services:
       - 5432:5432
     environment:
       POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: db
+    volumes:
+      - ./data:/var/lib/postgresql/data
 
   adminer:
     image: adminer
