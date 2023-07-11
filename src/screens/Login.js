@@ -18,22 +18,15 @@ export default class Login extends React.Component {
 
     // Führe eine HTTP-Anfrage an deine serverseitige API zur Authentifizierung durch
     axios
-      .post('http://localhost:3000/login', {
+      .post('http://10.0.2.2:3000/login', {
         email: email,
         password: password,
       })
       .then(response => {
         // Verarbeite die Antwort vom Server
         if (response.data.success) {
-          // Benutzer wurde erfolgreich authentifiziert
-          // Du kannst zur nächsten Ansicht navigieren oder andere Aktionen durchführen
-          //alert('erolgreische Anmeldung');
-          
-         // this.props.navigation.navigate('MainContainer');
          navigate('HomeScreen');
         } else {
-          // Authentifizierung fehlgeschlagen
-          // Zeige eine Fehlermeldung an oder führe andere Aktionen durch
           alert('Ungültige E-Mail oder Passwort');
         }
       })

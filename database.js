@@ -3,10 +3,10 @@ const { Pool } = require('pg');
 // Konfiguriere die Verbindungsinformationen
 const pool = new Pool({
   host: 'localhost',
-  port: 5433,
-  user: 'postgres',
-  password: '1989',
-  database: 'postgres',
+  port: 5432,
+  user: 'admin',
+  password: 'admin',
+  database: 'db',
 });
 
 // Führe eine SQL-Abfrage aus

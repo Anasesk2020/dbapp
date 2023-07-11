@@ -1,16 +1,16 @@
 const { Client } = require('pg');
 
 const client = new Client({
-  host: 'localhost',
-  port: 5433,
-  user: 'postgres',
-  password: '1989',
-  database: 'postgres',
+  host: '172.17.0.2',
+  port: 5432,
+  user: 'postgres-container',
+  password: 'admin-p',
+  database: 'test',
 });
 
 client.connect();
 
-client.query('SELECT * FROM users', (err, res) => {
+client.query('SELECT * FROM accounts', (err, res) => {
   if (!err) {
     console.log(res.rows);
   } else {

@@ -8,10 +8,10 @@ app.use(bodyParser.json());
 // Verbindung zur Datenbank
 const pool = new Pool({
   host: 'localhost',
-  port: 5433,
-  user: 'postgres',
-  password: '1989',
-  database: 'postgres',
+  port: 5432,
+  user: 'admin',
+  password: 'admin',
+  database: 'db',
 });
 
 // API-Endpunkt für die Benutzerauthentifizierung

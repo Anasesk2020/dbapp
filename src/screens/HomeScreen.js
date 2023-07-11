@@ -11,7 +11,7 @@ export default function HomeScreen({ navigation }) {
   }, []);
 
   const loadMessages = () => {
-    axios.get('http://localhost:3000/messages')
+    axios.get('http://10.0.2.2:3000/messages')
       .then(response => {
         if (response.data.success) {
           setMessages(response.data.messages);
